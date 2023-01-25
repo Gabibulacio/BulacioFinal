@@ -11,11 +11,7 @@
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.nav ul > li:hover ul{
-    display: block;
-    position: relative;
-    padding: 60px;
-}
+
 .nav ul  li  a {
     display: block;
     padding: 20px;
@@ -33,8 +29,7 @@
         position: fixed;
         font-size: 32px;
         padding: 10px;
-        
-    }
+        }
     .nav > ul {
         position: fixed;
         top: 0;
@@ -48,9 +43,11 @@
         height: 100vh;
         transition: 0.5s;
         }
+
     .nav .fa-bars:hover + ul{
         left: 0;
     }
+ 
 }
 .encabezado {
     background-image: url(../img/123.png);
@@ -79,8 +76,6 @@
        
        }
 }
-
-
 .encabezado-productos{
     background-color: burlywood;
     background-size: cover;
@@ -250,16 +245,13 @@
     font-family: fantasy;
     font-size: 80px;
     color: rgba(171, 134, 87, 0.896);
+    @media(max-width:1030px){ 
+            height: 150px;
+            font-size: 30px;
+            justify-content: center;
+            text-align: center;
+          }
 }
-@media(max-width:1030px){
-    .imagen-cuotas{
-        height: 150px;
-        font-size: 30px;
-        justify-content: center;
-        text-align: center;
-      }
-}
-
 .pie__titulo {
             display: flex;
             justify-content: center;
@@ -267,22 +259,6 @@
             font-style: italic;
             font-size: 50px;
             padding: 20px;
-}
-@media(max-width:1030px){
-    .pie{
-        display: block;
-        background-size: cover;
-        width: auto;
-        height: auto;
-    }
-}
-@media(min-width:320px){
-    .pie{
-        display: block;
-        background-size: cover;
-        width: auto;
-        height: auto;
-    }
 }
 .nosotros  {
     background-color: whitesmoke;
@@ -319,21 +295,29 @@
 .formulario label{
     display: flex;
     flex-direction: column;
-    width: 800px   
-}
+    width: 800px 
+} 
 @media(max-width:1030px){
-        .formulario > label {
-             width: auto;
-             height: auto;
-            font-size: 15px;
-            padding: 5px;
-        }
-}
+    .formulario > label {
+         width: auto;
+         height: auto;
+        font-size: 15px;
+        padding: 5px;
+    }
+} 
+
+
 .cambios {
     padding: 10px;
     background-color: burlywood;
     background-size: cover;
     height: 500px;
+    @media(max-width:1080px){
+            width: auto;
+            height: auto;
+           font-size: 5px;
+           text-align: center;
+        }
 }
 .cambios__lista{
     padding: 30px;
@@ -343,22 +327,7 @@
     font-style: italic;
     font-size: 20px;    
 }
-@media(max-width:1030px){
-    .cambios {
-        width: auto;
-        height: auto;
-       font-size: 5px;
-       text-align: center;
-    } 
-}
-@media(min-width:320px){
-    .cambios {
-        width: auto;
-        height: auto;
-       font-size: 5px;
-       text-align: center;
-    } 
-}
+
 @media(max-width:1030px){
     .nosotros {
         background-color: burlywood;
@@ -380,20 +349,35 @@
     background-size: cover;
     width: 100%;
     height: 580px;
-    display: flexbox;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     padding: 70px;
-    font-size: 50px;
+    font-size: 45px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-        a{
+    @media(max-width:745px){
+        width: auto;
+        height: 100vh;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        }
+        .btn-resp{
            background-color: gray;
            border: solid 1px;
            border-radius: 10px;
            color: whitesmoke;
            font-size: 30px;
            padding: 8px 15px;
-           text-decoration: none;  
+           text-decoration: none; 
+           width: auto;
+           @media(max-width:745px){
+            font-size: 16px;
+            padding: 7px 16px;
+            width: auto;
+           }
         }
 }
 @media(max-width:1030px){
@@ -409,21 +393,24 @@
 .pie{
         background-color: burlywood;
         background-size: cover;
-        height: 250px;
+        height: 235px;
         padding: 25px;
         width: 100%;
         display: flexbox;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-
-
-        .iconos {
-                
+        @media(max-width:1030px){
+                display: block;
+                background-size: cover;
+                width: auto;
+                height: auto;
+            }
+        .iconos {   
             display: flex;
             justify-content: center; 
             flex-direction: row;                          
-        }
+            }
             a{
                 text-decoration: none;
                 font-size: 30px;
@@ -432,12 +419,26 @@
                 color: black; 
                 @media(max-width:1030px){
                     font-size: 22px;
-                    padding: 12px;
-                @media(min-width:320px){
-                        font-size: 22px;
-                        padding: 12px;
-                } 
-            }  
-        }           
+                    padding: 12px; 
+                }  
+             }           
     }
+.seleccion-productos{
+    position: absolute;
+    background-color: burlywood;
+    list-style-type: none;
+    display: none;
+    z-index: 1000;
+    :hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.nav > ul > li:hover ul{
+    display: block;
+}
+
+
+
+
 
